@@ -1,15 +1,19 @@
 # Online Learning
 This repository contains a summary of the massive open online courses (MOOCs) / interactive online learning websites that I have completed or am currently doing, as well as submissions for hackathons that I participated in and awards received (if any).
 
+## Programming
+Repository
+-----------
+[Kattis](https://github.com/shumarb/online-learning/tree/main/competitive-programming/kattis)
 
 ## SQL
-Content | URL | Status | Certificate of Completion
+Repository | Course Information | Status | Certificate of Completion
 ----------- | --------------------------------- | ----------- | --------------------------------- |
 [SQLBolt](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/sqlbolt/sqlbolt-answers.sql) | [SQLBolt](https://sqlbolt.com/) | Complete | -
 [The Complete SQL Bootcamp 2021 Go From Zero to Hero](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/answer.sql) | [Udemy](https://www.udemy.com/course/the-complete-sql-bootcamp/) | Complete | [Link](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf)
 
 ## Hackathons
-Hackathon | URL | Awards
+Repository | Hackathon | Award
 ----------- | --------------------------------- | ----------- |
-2018 Mosque Tech Challenge | [GeoPrints](https://github.com/2018-MTC-dynamicoders/GeoPrints) | $300
-2019 Hack&Roll | [Crypto High School](https://github.com/shumarb/crypto-high-school) | -
+[GeoPrints](https://github.com/2018-MTC-dynamicoders/GeoPrints) | 2018 Mosque Tech Challenge | $300
+[Crypto High School](https://github.com/shumarb/crypto-high-school) | 2019 Hack&Roll | -
