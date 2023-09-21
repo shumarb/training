@@ -1,5 +1,5 @@
 # Online Learning & Hackathons
-This repository contains a summary of online learning that I have done, and repositories for my hackathons.
+This repository contains a summary of online learning that I have done, and repositories for hackathons that I participated in.
 
 ## Online Learning
 Repository | Programming Language | Website | Certificate of Completion
