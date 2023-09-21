@@ -10,5 +10,6 @@ Content | URL | Status | Certificate of Completion
 
 ## Hackathons
 Hackathon | URL | Awards
+----------- | --------------------------------- | ----------- |
 2018 Mosque Tech Challenge | [GeoPrints](https://github.com/2018-MTC-dynamicoders/GeoPrints) | $300
 2019 Hack&Roll | [Crypto High School](https://github.com/shumarb/crypto-high-school) | -
