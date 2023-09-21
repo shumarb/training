@@ -1,4 +1,4 @@
-# Online Learning
+# Online Learning & Hackathons
 This repository contains a summary of online learning that I have done, and repositories for my hackathons.
 
 ## Online Learning
