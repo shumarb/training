@@ -22,7 +22,7 @@ Problem Set| Code |
 [FreeFood](https://open.kattis.com/problems/freefood) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/FreeFood.java)
 [Hanging Out on the Terrace](https://open.kattis.com/problems/hangingout) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/HangingOut.java)
 [Harshad Numbers](https://open.kattis.com/problems/harshadnumbers) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/Harshad.java)
-[Hello World!](https://open.kattis.com/problems/hello) | [C](https://github.com/Sheikh-Umar/kattis/tree/master/c/HelloWorld.c), [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/HelloWorld.java)
+[Hello World!](https://open.kattis.com/problems/hello) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/HelloWorld.java)
 [Help a PhD candidate out!](https://open.kattis.com/problems/helpaphd) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/HelpPhD.java)
 [Hissing Microphone](https://open.kattis.com/problems/hissingmicrophone) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/Hiss.java)
 [I've Been Everywhere, Man](https://open.kattis.com/problems/everywhere) | [Java](https://github.com/Sheikh-Umar/kattis/blob/master/java/Everywhere.java)
