@@ -7,7 +7,7 @@ This repository contains a summary of my online learning, and repositories for h
 Learning Platform | Course | Skill(s) | Code | Certificate of Completion
 ----------------- | ------ | -------- | ---- | -------------------------
 [Coursera](https://www.coursera.org) | [Introduction to Relational Database and SQL](https://www.coursera.org/projects/introduction-to-relational-database-and-sql) | PostgreSQL, SQL | - | [Certificate](https://www.coursera.org/account/accomplishments/verify/ACTDGDEZMHWL) | 
-[Udemy](https://www.udemy.com) | [The Complete SQL Bootcamp 2021 Go From Zero to Hero](https://www.udemy.com/course/the-complete-sql-bootcamp/) | SQL | [Code](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/answer.sql) | [Certificate](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf)
+[Udemy](https://www.udemy.com) | [The Complete SQL Bootcamp 2021 Go From Zero to Hero](https://www.udemy.com/course/the-complete-sql-bootcamp/) | PostgreSQL, SQL | [Code](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/answer.sql) | [Certificate](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf)
 
 ### Programming
 Learning Platform | Code/Repository | Skill(s)
