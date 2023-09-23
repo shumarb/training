@@ -10,9 +10,9 @@ Learning Platform | Course | Skill(s) | Code | Certificate of Completion
 [Udemy](https://www.udemy.com) | [The Complete SQL Bootcamp 2021: Go From Zero to Hero](https://www.udemy.com/course/the-complete-sql-bootcamp/) | PostgreSQL, SQL | [Code](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/answer.sql) | [Certificate](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf)
 
 ### Programming
-Learning Platform | Code/Repository | Skill(s)
+Learning Platform | Code/Folder | Skill(s)
 ----------------- | ---- | --------
-[Kattis](https://open.kattis.com/) | [Repository](https://github.com/shumarb/online-learning/tree/main/competitive-programming/kattis) | Java |
+[Kattis](https://open.kattis.com/) | [Folder](https://github.com/shumarb/online-learning/tree/main/competitive-programming/kattis) | Java |
 [SQLBolt](https://sqlbolt.com/) | [Code](https://github.com/Sheikh-Umar/online-learning/blob/main/sql/sqlbolt/sqlbolt-answers.sql) | SQL |
 
 ## Hackathons
