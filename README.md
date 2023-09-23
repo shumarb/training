@@ -3,7 +3,7 @@ This repository contains a summary of my online learning, and repositories for h
 
 ## Online Learning
 
-### Massive Open Online Courses (MOOCs)
+### Courses
 Learning Platform | Course | Skill(s) | Code | Certificate of Completion
 ----------------- | ------ | -------- | ---- | -------------------------
 [Coursera](https://www.coursera.org) | [Introduction to Relational Database and SQL](https://www.coursera.org/projects/introduction-to-relational-database-and-sql) | PostgreSQL, SQL | - | [Certificate](https://www.coursera.org/account/accomplishments/verify/ACTDGDEZMHWL) | 
