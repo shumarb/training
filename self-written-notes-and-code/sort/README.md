@@ -4,7 +4,7 @@ This repository contains sorting techniques that I implemented on my own.
 Sorting Technique | Worst-case Time Complexity | Space Complexity | In-place? | Stable?
 ------------------| ---------------------------| ---------------- | ----------| -------
 [Merge Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/merge-sort/MergeSort.java)                | O(Nlog(N))  | O(N) | No  | Yes
-[Bubble Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/sort/bubble-sort/BubbleSort.java)             | O('N^2')      | O(1) | Yes | Yes
+[Bubble Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/sort/bubble-sort/BubbleSort.java)             | O(N^2)      | O(1) | Yes | Yes
 [Insertion Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/insertion-sort/InsertionSort.java)    | O(N^2)      | O(1) | Yes | Yes
 [Quick Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/quick-sort/QuickSort.java)                | O(N^2)      | O(1) | Yes | No
 [Selection Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/selection-sort/SelectionSort.java)    | O(N^2)      | O(1) | Yes | No
