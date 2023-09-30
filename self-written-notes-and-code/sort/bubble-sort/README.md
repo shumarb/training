@@ -4,7 +4,9 @@
 Bubble Sort is a **comparison-based, in-place, and stable** sorting algorithm that works by repeatedly swapping the adjacent elements if both these elements are in the wrong order.
 
 ## Worst-case Time Complexity
-**O($N^2$)**, because the algorithm comprises of a nested loop. The outer loop iterates from the first element to the penultimate element of the array. Hence, the Time Complexity of the outer loop is O(N - 1) = O(N). The inner loop iterates from the second element to the last element of the array. Hence, the Time Complexity of the outer loop is O(N - 1) = O(N). Therefore, the Time Complexity of the nested loop is O(N * N) = O($N^2$).
+**O($N^2$)**, because the algorithm comprises of a nested loop. The outer loop iterates from the first element to the penultimate element of the array. Hence, the Time Complexity of the outer loop is O(N - 1) = O(N). The inner loop iterates from the second element to the last element of the array. 
+
+Hence, the Time Complexity of the outer loop is O(N - 1) = O(N). Therefore, the Time Complexity of the nested loop is O(N * N) = O($N^2$).
 
 ## Space Complexity
 **O(1)**, because only 1 variable is required as extra space.
