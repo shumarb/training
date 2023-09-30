@@ -3,7 +3,7 @@
 This repository contains sorting techniques that I implemented on my own.
 Sort Technique | Worst-case Time Complexity | Space Complexity | In-place? | Stable?
 ------------------| ---------------------------| ---------------- | ----------| -------
-[Merge Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/merge-sort)                | O(Nlog(N))  | O(N) | No  | Yes
+[Merge Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/merge-sort)                | O(Nlog<sub>2</sub>N))  | O(N) | No  | Yes
 [Bubble Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/bubble-sort)             | O($N^2$)      | O(1) | Yes | Yes
 [Insertion Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/insertion-sort)    | O($N^2$)     | O(1) | Yes | Yes
 [Quick Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/quick-sort)                | O($N^2$)      | O(1) | Yes | No
