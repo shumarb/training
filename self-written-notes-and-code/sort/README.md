@@ -3,11 +3,11 @@
 This repository contains sorting techniques that I implemented on my own.
 Sorting Technique | Worst-case Time Complexity | Space Complexity | In-place? | Stable?
 ------------------| ---------------------------| ---------------- | ----------| -------
-[Merge Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/merge-sort/)                | O(Nlog(N))  | O(N) | No  | Yes
-[Bubble Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/sort/bubble-sort/)             | O(N^2)      | O(1) | Yes | Yes
-[Insertion Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/insertion-sort/)    | O(N^2)      | O(1) | Yes | Yes
-[Quick Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/quick-sort/)                | O(N^2)      | O(1) | Yes | No
-[Selection Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/selection-sort/)    | O(N^2)      | O(1) | Yes | No
+[Merge Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/merge-sort)                | O(Nlog(N))  | O(N) | No  | Yes
+[Bubble Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/bubble-sort)             | O(N^2)      | O(1) | Yes | Yes
+[Insertion Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/insertion-sort)    | O(N^2)      | O(1) | Yes | Yes
+[Quick Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/quick-sort)                | O(N^2)      | O(1) | Yes | No
+[Selection Sort](https://github.com/shumarb/online-learning-and-hackathons/tree/main/self-written-notes-and-code/sort/selection-sort)    | O(N^2)      | O(1) | Yes | No
 
 In-place sort: A sorting algorithm is an **in-place** sort if it requires only a **constant amount of time (O(1)) of extra space** during the sorting process.
 Stable sort: A sorting algorithm is **stable** if the **relative order of elements with the same key value is preserved** by the algorithm.
