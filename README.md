@@ -11,7 +11,7 @@ Learning Platform | Course | Skill(s) | Code | Certificate
 ### Self-written Notes & Code
 Concept                                                                  | Skill(s)                                                                     
 ------------------------------------------------------------------------ | ------------------------------------------------------------------------
-[Sorting](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/sort)  | Java
+[Sort](https://github.com/shumarb/online-learning/tree/main/self-written-notes-and-code/sort)  | Java
 
 ### Programming
 Learning Platform | Code/Folder | Skill(s)
