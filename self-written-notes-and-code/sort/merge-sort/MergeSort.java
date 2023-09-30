@@ -39,7 +39,7 @@ class MergeSort {
         displaysArray("* leftPartitionArray", leftPartitionArray);
         displaysArray("* righttHalfArray", rightPartitionArray);
 
-        // 3. Execute Merge Sort on the 2 arrays split from inputArray.
+        // 3. Execute Merge Sort on the left and right partitions
         executesMergeSort(leftPartitionArray);
         executesMergeSort(rightPartitionArray);
 
