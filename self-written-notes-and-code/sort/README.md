@@ -14,7 +14,7 @@ In-place sort: A sorting algorithm is an **in-place** sort if it requires only a
 Stable sort: A sorting algorithm is **stable** if the **relative order of elements with the same key value is preserved** by the algorithm.
 
 ## How to use this repository
-1. Ensure that your local machine contains a Java Development Kit (JDK) from version 8 onwards.
+1. Ensure that your local machine contains a `Java Development Kit (JDK)` from `version 8 onwards`.
 2. Clone this repository on your local machine.
 2. Open up terminal.
 3. Navigate to the location that this repository is stored.
