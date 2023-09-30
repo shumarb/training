@@ -4,7 +4,10 @@
 Merge Sort is a **comparison-based, and stable** sorting algorithm divide-and-conquer sorting algorithm that works by recursively dividing an array in smaller arrays, sorting each subarray, and merging these sorted smaller arrays together to form the sorted array.
 
 ## Worst-case Time Complexity
-**O(NlogN)**, because subarrays are created for every element.
+**O(Nlog(N))**, because Merge Sort can be expressed as a recurrence relation: T(N) = 2T(N/2) + O(N). 
+The array of size N is divided into smaller arrays with a maximum of log(N) parts until a smaller array of size 1 is formed for each array.
+Te merging of these smaller arrays involved merging arrays of size 1 to form a sorted algorithm of size N.
+Hence, the worst-case time complexity is O(N * log(N)).
 
 ## Space Complexity
 **O(N)**, because an array of N elements is divided to form N arrays of size 1 before the merge. Hence, an N arrays of size 1 is required as extra space.
