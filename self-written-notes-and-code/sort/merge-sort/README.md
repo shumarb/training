@@ -12,8 +12,6 @@ The array of size N is divided into smaller arrays with a maximum of log<sub>2</
 
 The merging steps invole combining N arrays of size 1 to form a sorted array of size N.
 
-Therefore, the worst-case time complexity is O(Nlog<sub>2</sub>N).
-
 ## Space Complexity
 **O(N)**.
 
