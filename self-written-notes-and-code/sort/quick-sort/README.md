@@ -4,7 +4,7 @@
 Quick Sort is a **comparison-based, in-place, and unstable** divide-and-conquer sorting algorithm that works by selecting an element as a pivot, forming 2 partitions by shifting all elements smaller and larger than the pivot to the left and right of the pivot respectively, and recursively sorts these 2 partitions.
 
 ## Worst-case Time Complexity
-**O(N^2)**.
+**O($N^2$)**.
 
 The worst-case scenario is when the elements of the array are in reversed order. Hence, each of the N elements is selected as the pivot for each iteration, and a swap of elements occurs for each iteration. Hence, N elements are selected as the pivot N times.
 

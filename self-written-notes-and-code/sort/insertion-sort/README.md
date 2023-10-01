@@ -4,7 +4,7 @@
 Insertion Sort is a **comparison-based, in-place, and stable** sorting algorithm that works by moving an element to its correct position for every iteration.
 
 ## Worst-case Time Complexity
-**O(N^2)**.
+**O($N^2$)**.
 
 The worst-case scenario is an array of elements initially in reverse order. Hence, every element is shifted to the other side `N -  1` times to the correct position. 
 
