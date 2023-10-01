@@ -14,11 +14,12 @@ In-place sort: A sorting algorithm is an **in-place** sort if it requires only a
 Stable sort: A sorting algorithm is **stable** if the **relative order of elements with the same key value is preserved** by the algorithm.
 
 ## How to use this repository
-1. Ensure that your local machine contains a `Java Development Kit (JDK)` from `version 8 onwards`.
-2. Clone this repository on your local machine.
+1. Ensure that your local machine contains a `Java Development Kit (JDK) version 8 or later`.
 2. Open up terminal.
-3. Navigate to the location that this repository is stored.
-4. Navigate to a folder containing a sorting technique you are interested in. (Example: `cd selection-sort`).
-5. Compile the Java code by entering `javac sort-technique.java`. (Example: `javac SelectionSort.java`).
-6. Run the program by entering `java sort-technique`. (Example: `javac SelectionSort`).
-7. The program creates an array randomly. This is to validate the correctness of the algorithm in all-possible cases. The elements are of type `integer`. The number of elements range from `7 to 12`, and the value elements range from `-1000 to 1000`. The program displays the array before the sort, the steps of the sort technique that occur during the iteration of the array, the array after the sort, and a side-by-side comparison of the array before and after the sort.
+3. Identify a location to clone this repository, and navigate to this location.
+4. Clone this repository by entering `git clone git@github.com:shumarb/learning-and-hackathons.git`
+5. Navigate to the `sort` folder by entering `cd sort`.
+6. Navigate to a folder containing the sorting technique you are interested in. (Example: `cd selection-sort`).
+7. Compile the Java code by entering `javac sort-technique.java`. (Example: `javac SelectionSort.java`).
+8. Run the program by entering `java sort-technique`. (Example: `javac SelectionSort`).
+9. The program creates an array randomly. This is to validate the correctness of the algorithm in all-possible cases. The elements are of type `integer`. The number of elements range from `5 to 12`, and the value elements range from `-1000 to 1000`. The program displays the array before the sort, the steps of the sort technique that occur during the iteration of the array, the array after the sort, and a side-by-side comparison of the array before and after the sort.
