@@ -12,7 +12,7 @@ Binary Search is an efficient search algorithm that checks whether element is av
 5. Repeat steps `2 to 5` until either the key is found or all elements have been discarded (meaning the key does not exist).
 
 ## Worst-case Time Complexity
-`O(log<sub>2</sub>N)`.
+**O(log<sub>2</sub>N)**.
 
 This is because the portion of the list that could contain the element is repeatedly `divided` into half until it is of size `1`.
 
