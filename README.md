@@ -1,5 +1,5 @@
 # Achievements
-This repository contains a summary of my learning, and repositories for hackathons that I participated in.
+This repository contains a summary of my learning, programming practices, and hackathons that I participated in.
 
 ## Learning
 ### Courses
