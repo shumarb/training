@@ -2,6 +2,12 @@
 This repository contains a summary of my training, and hackathons that I participated in.
 
 ## Learning
+
+### FDM
+Course                                                                                                          | Skill(s) |
+--------------------------------------------------------------------------------------------------------------- | -------- |
+[Object-oriented Development (Part 1)](https://github.com/shumarb/training/tree/main/fdm/ood-1-project/)        |  Java    |
+
 ### Courses
 Course            | Skill(s) | Code | Certificate
 ----------------- | -------- | ---- | ----------- |
