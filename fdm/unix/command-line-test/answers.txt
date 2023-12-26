@@ -1,0 +1,125 @@
+# My answers for the Command Line Test
+
+1. Create a file called myFile
+touch myFile
+
+
+2.List the permissions of myFile
+ls -l myFile | cut -d ' ' -f1
+
+
+3.Change the permissions on myFile to:
+a)	ensure the user full permissions 
+b)	remove all permissions from everyone else
+chmod 700 myFile
+
+
+4.Identify the type of file /etc/hosts is.
+file /etc/hosts
+
+
+5.Display the pathname of your home directory using the relevant standard environment variable
+echo $HOME
+
+
+6.List all your environment variables, but display them one page at a time
+env
+
+
+7.Display the value of the $PATH variable
+echo $PATH
+
+
+8.Display the value of the $PATH variable, but replace any : characters with a space character
+echo $PATH | tr ':' ' '
+
+
+9.Display a list of logged on users, with name, terminal and log on time
+who
+
+
+10.Display the number of logged on users
+who | wc -l
+
+
+11.Display a list of logged on users, username only
+users
+
+
+12.Display a list of all the regular files in the /bin directory with a name starting with z
+ls -r /bin > newbinfiles.txt
+grep '^z' newbinfiles.txt
+
+
+13.Display a list of all the regular files in the /bin directory with a name starting with z and save this list of filenames in a file called zfiles
+ls -r /bin > binfiles.txt
+grep '^z' binfiles.txt > zfiles
+
+
+14.Find all the regular files in /etc which are less than 1k in size.  Redirect any error messages to a file called errors
+find /etc -type f -size -1k | grep Permission > errors
+
+
+15.Display all the lines in the batchprog file which contain a digit
+grep '[0-9]' batchprog
+
+
+16.Count the number of lines in batchprog which contain the digit 5
+grep 5 batchprog | wc -l
+
+
+17.Display all the lines in grepFile which contain the text hall, ignoring case
+grep hall grepFile
+
+
+18.Display all the lines in grepFile which contain the word hall, ignoring case
+grep -w hall grepFile
+
+
+19.Display the 1st line of the file grepFile
+cat grepFile | head -1
+
+
+20.Display line 5 of the file grepFile
+cat grepFile | head -n+5 | tail -1
+
+
+21.Sort the batchprog file into alphabetical order
+cat batchprog | sort
+
+
+22.Sort the batchprog file into alphabetical order and display each line only once
+cat batchprog | sort -u
+
+
+23.Using the date command display just the time
+date | cut -d ' ' -f5
+
+
+24.Using the UNIX help facilities, display just the day of the week, this must be the full name, not the short name displayed by default.
+date +%A
+
+
+25.List all the processes running on the UNIX system
+ps
+
+
+26.Run the command sleep 20 in the background
+sleep 20
+
+
+27.Terminate the background sleep command.
+press control, then press c
+
+
+28.Display a list of directories within your home directory, the output must only include
+ls -a -d ~
+
+
+29.Find all empty regular files in your unixtest directory
+find . -type d -empty
+
+
+30.List the i-node numbers for all the files in your unixtest directory
+ls -i
+
