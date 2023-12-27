@@ -1,0 +1,80 @@
+#!/bin/bash
+#
+# This script restores individual files back to their original location via the following:
+# 
+# 1. Enter the file name and it's inode number in this format: fileName@inode
+#
+# 2. If you enter any of the following, an appropriate error message is displayed and the script is terminated:
+# No file entered, or a non-existent file.
+#
+# 3. The script checks if the file being restored already exists in the target directory.
+# If it does, the user will be asked "Do you want to overwrite? y/n "
+# If the user types any word beginning with y to this prompt, the script restores the file.
+# Otherwise, the script does not restore the file.
+#
+# 4. Once the file is succesfully restored, the entry in the .restoreInfo file is deleted.
+
+# ============================================ VARIABLES ============================================
+RECYCLE_BIN_PATH="$HOME/recyclebin"
+RECYCLE_SCRIPT_PATH="$HOME/project/recycle"
+RESTORE_SCRIPT_PATH="$HOME/project/restore"
+RESTORE_INFO_PATH="$HOME/.restoreInfo"
+# ============================================ FUNCTIONS ============================================
+function error() {
+        echo $1
+        exit 2
+}
+
+function restore() {
+        local fileToMove=$1
+        local fileName=$2
+        local fileLocation=$3
+        local fileRestoreInfoObject=$4
+
+        # 1. File is in the recycling bin. Rename it by removing portions from @ onwards
+        mv "$RECYCLE_BIN_PATH/$fileToMove" "$RECYCLE_BIN_PATH/$fileName"
+
+        # 2. Move the renamed file to its initial location
+        mv "$RECYCLE_BIN_PATH/$fileName" "$fileLocation/"
+
+        # 3. Remove entry associated with fileName from .restore
+        # 3.1. Create a new file without entry to remove using grep
+        grep -v "$fileRestoreInfoObject" "$RESTORE_INFO_PATH" > "$RESTORE_INFO_PATH.new"
+
+        # 3.2. Update .restoreInfo by replacing it with the .new file using the mv command
+        mv "$RESTORE_INFO_PATH.new" "$RESTORE_INFO_PATH"
+}
+
+function checkIfExists() {
+        local fileName=$(echo $1 | cut -d '@' -f1)
+        local fileRestoreInfoObject=$(grep "$fileName" $RESTORE_INFO_PATH)
+        local fileLocation=$(grep "$fileName" $RESTORE_INFO_PATH | cut -d '|' -f2)
+
+        if [ -e "$fileLocation/$fileName" ]
+        then
+                read -p "Do you want to overwrite? y/n " choice
+                local firstCharacter=$(echo "$choice" | grep -o '^.')
+                if [[ "$firstCharacter" != [yY] ]] 
+                then
+                        exit 0
+                else
+                        # Remove duplicate in the file location
+                        rm "$fileLocation/$fileName"
+                fi
+        fi
+        restore $1 $fileName $fileLocation $fileRestoreInfoObject
+}
+
+# ============================================ MAIN ============================================
+if [ $# -eq 0 ]
+then
+        error "No file provided."
+elif [ ! -e $RECYCLE_BIN_PATH ]
+then
+        error "File does not exist. Operation aborted."
+fi
+
+if [ -e $RECYCLE_BIN_PATH ]
+then   
+        checkIfExists $1
+fi

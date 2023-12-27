@@ -1,0 +1,171 @@
+#!/bin/bash
+
+# Unix has no recycle command. When a user removes a file, it is permanently removed and cannot be restored.
+# This recycle script provides users with a recycle bin to safely retrieve their deleted files.
+#
+# This script addresses this issue via the following:
+#
+# 1. Create a recycle bin in the form of a directory if it does not exist. 
+# It also creates a .restoreInfo that stores a file's information in the form of the file's name,
+# followed by it's inode number.
+#
+# 2. Next run the script and enter a file.
+# If you enter any of the following, an appropriate error message is displayed and the script is terminated:
+# No file entered, a non-existent file, a directory, and this script itself.
+#
+# 3. Once the file clears the checks in step 2, it is moved from it's current location to the recycle bin,
+# and renamed in this format: fileName@inode,
+# where fileName is the name of the file, and inode is the file's inode.
+#
+# 4. Lastly, the file's information is stored in a .restoreInfo file in this format: fileName@inode|filePath,
+# where fileName is the name of the file, inode is the file's inode, and filePath is the original absolute path of the file.
+
+# ============================================ VARIABLES ============================================
+RECYCLE_BIN_PATH="$HOME/recyclebin"
+RECYCLE_SCRIPT_PATH="$HOME/project/recycle"
+RESTORE_SCRIPT_PATH="$HOME/project/restore"
+RESTORE_INFO_PATH="$HOME/.restoreInfo"
+# ============================================ FUNCTIONS ============================================
+# Recycle failure happens via 
+# 1. no file entered
+# 2. non-existent file entered
+# 3. attempt to delete this recycle script itself
+# 4. invalid option entered for phase 3
+function recycleFailure() {
+        echo $1
+        exit 2
+}
+
+function recycleSuccess() {
+        echo $1 >> $2
+        continue
+}
+
+function recycle() {
+        local inode=$(ls -i "$file" | cut -d " " -f1)
+        local fileName=$(ls -i "$file" | cut -d " " -f2)
+        local newFileName=${fileName}@${inode} 
+
+        if [ ! -d $RESTORE_INFO_PATH ]
+        then
+                touch $RESTORE_INFO_PATH
+        fi
+
+        mv $file $newFileName
+        mv $newFileName $RECYCLE_BIN_PATH
+        
+        local fileRestoreName=$newFileName'|'"$(realpath $f)"
+        recycleSuccess $fileRestoreName $RESTORE_INFO_PATH
+}
+
+# when -i option entered
+function confirm() {
+        read -p "Are you sure you want to remove $1? y/n " choice
+        local firstCharacter=$(echo "$choice" | grep -o '^.')
+        # End if choice user entered does not start with y or Y
+        if [[ "$firstCharacter" != [yY] ]] 
+        then
+                continue
+        fi
+}
+
+# when -v option entered
+function delete() {
+        echo "$1 has been removed"
+        continue
+}
+
+# when -r option entered
+function deleteDirectory() {
+        # A directory is empty if it has 0 elements
+        local count=$(ls -A "$dir" | wc -l)
+        if [ "$count" -eq 0 ]
+        then
+                echo "**empty directory, so delete"
+                rm -r $dir
+                exit 0
+        fi
+
+        # The directory is not empty.
+        # For each item in the directory,
+        local dir=$1
+        for item in "$dir"/*
+        do
+                # 1. check if it is a file.
+                # if yes, recycle it, and remove it from this directory
+                recycle "$item"
+
+                # 2. Regardless of whether the item is a file, remove it from the directory
+                rm "$item"
+
+                # 3. pass this directory with 1 item less to this function,
+                # and repeat 1 & 2 until the directory is empty
+                deleteDirectory "$dir"
+        done
+}
+# ============================================ MAIN ============================================
+if [ ! -d $RECYCLE_BIN_PATH ]
+then
+        mkdir $RECYCLE_BIN_PATH 
+fi
+
+if [ ! -d $RESTORE_INFO_PATH ]
+then
+        touch $RESTORE_INFO_PATH
+fi
+
+# No files provided
+if [ $# -eq 0 ] 
+then
+        echo "No file provided"
+        exit 1
+fi
+
+# Check that user entered the -i option
+isInteractive=false
+isVerbose=false
+isDeleteDirectory=false
+
+while getopts "riv" opt; do
+    case $opt in
+        i) isInteractive=true ;;
+        v) isVerbose=true ;;
+        r) isDeleteDirectory=true ;;
+        *) recycleFailure "$1 is an invalid option. Terminating the script" 2
+    esac
+done
+
+# Shift to arguments so that the option
+# itself is not considered an argument
+shift "$((OPTIND - 1))"
+
+for file in $*
+do
+        # File entered is this script
+        if echo $file | grep -q "recycle"
+        then 
+                recycleFailure "Attempting to delete recycle – operation aborted. Terminating the script now" 
+        elif [ ! -e $file ]
+        then
+                echo "No such file exists - operation aborted"
+                continue
+        elif [[ "$isDeleteDirectory" = true && -d $file ]]
+        then 
+                deleteDirectory $file
+                # recycleFailure "$file is a directory and not a file - operation aborted. Terminating the script now"
+        else
+                # User entered -i
+                if [ "$isInteractive" = true ]
+                then
+                        confirm "$file"
+                fi
+
+                # User entered -v
+                if [ "$isVerbose" = true ]
+                then
+                        delete "$file"
+                fi
+
+                recycle "$file"
+        fi
+done
