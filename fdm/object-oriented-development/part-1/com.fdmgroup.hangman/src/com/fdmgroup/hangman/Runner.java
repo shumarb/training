@@ -20,7 +20,7 @@
  * This program was written by Sheikh Umar.
  */
 
-// package com.fdmgroup.hangman;
+package com.fdmgroup.hangman;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -29,8 +29,8 @@ import java.util.Scanner;
 
 public class Runner {
 	private ArrayList <String> possibleWordsList = new ArrayList <String> ();
-	private HashSet <String> lettersEntered = new HashSet <String> ();
 	private final boolean isTest = false; // Only used for testing (eg: ensuring word formed is correct, etc...)
+	private HashSet <String> lettersEntered = new HashSet <String> ();
 	private int numberOfGuessesLeft = 8;
 	private Scanner sc = new Scanner(System.in);
 	private String word;
