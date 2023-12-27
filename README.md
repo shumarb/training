@@ -3,10 +3,11 @@ This repository contains a summary of my training, and hackathons that I partici
 
 ## Learning
 
-### FDM
-Course                                                                                                          | Skill(s) |
---------------------------------------------------------------------------------------------------------------- | -------- |
-[Object-oriented Development](https://github.com/shumarb/training/tree/main/fdm/ood-1-project/)                 |  Java    |
+### FDM Group
+Course                                                                                                          | Skill(s)              |
+--------------------------------------------------------------------------------------------------------------- | --------------------- |
+[Unix](https://github.com/shumarb/training/tree/main/fdm/unix)                                                  | Shell Scripting, Unix |
+[Object-oriented Development](https://github.com/shumarb/training/tree/main/fdm/object-oriented-development)    | Java                  |
 
 ### Courses
 Course            | Skill(s) | Code | Certificate
