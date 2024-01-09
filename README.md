@@ -11,7 +11,7 @@ Course | Skill(s) |
 Course  | Skill(s) | Code | Certificate |
 ------- | -------- | ---- | ----------- |
 [Introduction to Relational Database and SQL](https://www.coursera.org/projects/introduction-to-relational-database-and-sql) | PostgreSQL, SQL | - | [Certificate](https://www.coursera.org/account/accomplishments/verify/ACTDGDEZMHWL) | 
-[The Complete SQL Bootcamp 2021: Go From Zero to Hero](https://www.udemy.com/course/the-complete-sql-bootcamp/) | PostgreSQL, SQL | [Code](https://github.com/shumarb/training/blob/main/mooc/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/answers.sql) | [Certificate](https://github.com/shumarb/training/blob/main/mooc-completed/the-complete-sql-bootcamp-2021-go-from-zero-to-hero/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf) |
+[The Complete SQL Bootcamp 2021: Go From Zero to Hero](https://www.udemy.com/course/the-complete-sql-bootcamp/) | PostgreSQL, SQL | [Code](https://github.com/shumarb/training/blob/main/mooc/answers.sql) | [Certificate](https://github.com/shumarb/training/blob/main/mooc/sheikh-umar-udemy-sql-course-certificate-of-completion.pdf) |
 
 ## Programming
 Code   | Skill(s)    |
