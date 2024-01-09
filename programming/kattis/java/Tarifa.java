@@ -23,6 +23,7 @@ class Tarifa {
             remainder -= usage;
             remainder += X; // Top-up for next month
         }
+        sc.close();
         return remainder; 
     }
 

@@ -6,7 +6,7 @@ class Spanavac {
         Scanner sc = new Scanner(System.in);
         int numHours = sc.nextInt();
         int numMinutes = sc.nextInt();
-        
+        sc.close();
         if (numMinutes < 45) {
             if (numHours == 0) {
                 numHours = 23;

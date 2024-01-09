@@ -1,4 +1,3 @@
-import java.lang.Math;
 import java.util.Scanner;
 
 class Sibice {
@@ -33,6 +32,8 @@ class Sibice {
             boolean isFit = computesResult(V, D, W, H);
             displaysResult(isFit);
         }
+
+        sc.close();
     }
     
     public static void main(String[] args) {

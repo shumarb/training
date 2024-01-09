@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 class CS {
@@ -6,8 +5,7 @@ class CS {
     private Scanner sc = new Scanner(System.in);
     
     private int readsQ() {
-        int Q = sc.nextInt();
-        return Q;
+        return sc.nextInt();
     }
     
     private void displaysAns(int ans) {

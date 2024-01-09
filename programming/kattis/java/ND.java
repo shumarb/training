@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -7,8 +6,8 @@ class ND {
     private String[] readsWords() {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        String[] words = input.split(" ");
-        return words;
+        sc.close();
+        return input.split(" ");
     }
     
     private void displaysOutput(boolean isDuplicate) {

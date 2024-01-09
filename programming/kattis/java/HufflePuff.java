@@ -7,8 +7,9 @@ class HufflePuff {
         int N = sc.nextInt();
         int P = sc.nextInt();
         for (int i = 0; i < N; i++) {
-            String description = sc.next();
+            sc.next();
         }
+        sc.close();
         System.out.println(P);
     }
     
@@ -17,4 +18,3 @@ class HufflePuff {
         obj.run();
     }
 }
-

@@ -19,6 +19,7 @@ class QALY {
             }
             sum += (val[0] * val[1]);
         }
+        sc.close();
         return sum;
     }
     

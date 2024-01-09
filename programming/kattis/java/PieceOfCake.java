@@ -32,7 +32,11 @@ class PieceOfCake {
     // Postcon: Largest volume of cake computes
     private int computesLargestVolume(int[] values) {
         int[] volumes = new int[4];
-        int l = values[0], h = values[1], v = values[2], t = 4, largest;
+        int l = values[0];
+        int h = values[1];
+        int v = values[2];
+        int t = 4;
+        int largest;
         volumes[0] = h * v * t;
         volumes[1] = (l - v) * h * t;
         volumes[2] = (l - h) * (l - v) * t;
@@ -71,7 +75,7 @@ class PieceOfCake {
     }
     
     public static void main(String[] args) {
-        Cake obj = new Cake();
+        PieceOfCake obj = new PieceOfCake();
         obj.run();
     }
 }

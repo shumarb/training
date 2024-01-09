@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 class Aaah {
 
-    private String jon, doctor;
+    private String doctor;
+    private String jon;
 
     private void readsString() {
         Scanner sc = new Scanner(System.in);
         jon = sc.next();
         doctor = sc.next();
+        sc.close();
     }
 
     private void displaysResult(boolean isResult) {

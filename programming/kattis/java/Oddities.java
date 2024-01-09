@@ -5,6 +5,7 @@ class Oddities {
     private void run() {
         Scanner sc = new Scanner(System.in);
         int Q = sc.nextInt();
+        sc.close();
         for (int i = 0; i < Q; i++) {
             int N = sc.nextInt();
             if ((N % 2) != 0) {

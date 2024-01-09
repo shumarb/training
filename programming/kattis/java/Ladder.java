@@ -1,5 +1,3 @@
-import java.lang.Math;
-import java.util.Arrays;
 import java.util.Scanner;
 
 class Ladder {
@@ -10,6 +8,7 @@ class Ladder {
         for (int i = 0; i < values.length; i++) {
             values[i] = sc.nextDouble();
         }
+        sc.close();
         return values;
     }
     

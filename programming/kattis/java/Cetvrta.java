@@ -24,7 +24,7 @@ class Cetvrta {
 
     private int computesNumOccurrences(HashMap <Integer, Integer> numOccurrences, int[] coordinates, int start) {
         for (int i = start; i < coordinates.length; i += 2) {
-            if (numOccurrences.containsKey(coordinates[i]) == false) {
+            if (!numOccurrences.containsKey(coordinates[i])) {
                 numOccurrences.put(coordinates[i], 1);
             } else {
                 numOccurrences.put(coordinates[i], numOccurrences.get(coordinates[i]) + 1);
@@ -33,14 +33,14 @@ class Cetvrta {
         if (isTest) {
             System.out.println("numOccurrences: " + numOccurrences);
         }
-        Set numSet = numOccurrences.keySet();
+        Set <Integer> numSet = numOccurrences.keySet();
         if (isTest) {
             System.out.println("numSet: " + numSet);
         }
-        Iterator iter = numSet.iterator();
+        Iterator <Integer> iter = numSet.iterator();
         while (iter.hasNext()) {
-            Integer num = (Integer) iter.next();
-            Integer val = (Integer) numOccurrences.get(num);
+            Integer num = iter.next();
+            Integer val = numOccurrences.get(num);
             if (isTest) {
                 System.out.println(num + " --> " + val);
             }
