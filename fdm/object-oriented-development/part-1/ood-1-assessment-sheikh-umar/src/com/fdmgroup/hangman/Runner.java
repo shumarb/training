@@ -29,15 +29,16 @@ import java.util.Scanner;
 
 public class Runner {
 	private ArrayList <String> possibleWordsList = new ArrayList <String> ();
-	private final boolean isTest = false; // Only used for testing (eg: ensuring word formed is correct, etc...)
 	private HashSet <String> lettersEntered = new HashSet <String> ();
+	private boolean isWordGuessedCorrectly = false;
+	private final boolean isTest = false; // Only used for testing (eg: ensuring word formed is correct, etc...)
 	private int numberOfGuessesLeft = 8;
 	private Scanner sc = new Scanner(System.in);
 	private String word;
 	private String wordGuessSoFar = "";
 	
 	private void finalResult() {
-		if (isWordGuessedCorrectly()) {
+		if (isWordGuessedCorrectly) {
 			System.out.println("You guessed the word: " + word);
 			System.out.println("You win.");
 		} else {
@@ -139,7 +140,7 @@ public class Runner {
 	}
 	
 	private void game() {
-		while (!isWordGuessedCorrectly() && numberOfGuessesLeft > 0) {
+		while (!isWordGuessedCorrectly && numberOfGuessesLeft > 0) {
 			String letter = readsLetter();
 			if (hasLetterBeenEnteredEarlier(letter)) {
 				System.out.println("You had entered this letter earlier. Enter a different letter.");
@@ -149,6 +150,13 @@ public class Runner {
 					numberOfGuessesLeft--;
 				}
 				resultOfGuess(isLetterInWord, letter);
+				if (isWordGuessedCorrectly()) {
+					isWordGuessedCorrectly = true;
+					break;
+				}
+				if (numberOfGuessesLeft == 0) {
+					break;
+				}
 				wordGuessSoFar();
 				displayNumberOfGuessesLeft();
 			}
