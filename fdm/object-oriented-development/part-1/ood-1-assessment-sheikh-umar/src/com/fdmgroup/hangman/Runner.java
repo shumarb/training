@@ -213,6 +213,8 @@
 	  * inform the user that he/she has entered a non-letter character,
 	  * and that he/she has to enter a letter character
 	  * Repeat this until the user has entered a letter character
+	  * The number of attempts that the user has to guess the word correctly
+	  * remains unchanged
 	  * 
 	  * If the letter the user entered is in lowercase, convert it to uppercase
 	  * and return this uppercase to the caller function
@@ -227,11 +229,11 @@
 			 System.out.print("Your guess: ");
 			 input = sc.next();
 			 if (input.length() > 1) {
-				 System.out.println("You entered a word and not a letter. Enter a letter.");
+				 System.out.println("The input that you provided is a word and not a letter. Enter a letter.");
 			 } else {
 				 letter = input.charAt(0);
 				 if (!Character.isLetter(letter)) {
-					 System.out.println("Input provided is not a letter. Enter a letter.");
+					 System.out.println("The input that you provided is not a letter. Enter a letter.");
 				 }
 			 }
 		 } while (input.length() > 1 || !Character.isLetter(letter));
