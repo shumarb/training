@@ -19,13 +19,13 @@ At the end of the game, a message is displayed that indicates whether or not you
 6. Select `File`.
 7. Select `Open Projects from File System`.
 8. Select `Directory` next to `Import source`.
-9. Navigate to the location of the unzipped file
+9. Navigate to the location of the unzipped file.
 10. Select the unzipped file.
-11. Select `Finish`. You will see the `com.fdmgroup.hangman` Java project in the `Package Explorer`
-12. Select the `>` icon of the `com.fdmgroup.hangman` Java project
-13. Select the `>` icon of the `src` folder
-14. Select the `>` icon of the `com.fdmgroup.hangman` package
-15. Right-click `Runner.java`
-16. Select `Run As`
-17. Select `1. Java Application`
-18. Follow the instructions displayed in console on how to play the Hangman game
+11. Select `Finish`. You will see the `com.fdmgroup.hangman` Java project in the `Package Explorer`.
+12. Select the `>` icon of the `com.fdmgroup.hangman` Java project.
+13. Select the `>` icon of the `src` folder.
+14. Select the `>` icon of the `com.fdmgroup.hangman` package.
+15. Right-click `Runner.java`.
+16. Select `Run As`.
+17. Select `1. Java Application`.
+18. Follow the instructions displayed in console on how to play the Hangman game.
