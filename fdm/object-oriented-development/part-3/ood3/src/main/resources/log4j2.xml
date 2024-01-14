@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+
+	<!-- can be used to define variable constants -->
+	<Properties>
+	
+		<!-- in relation to the current location i.e. src/main/logs -->
+		<!-- creates a variable that can be referenced elsewhere in the configuration -->
+		<Property name="basePath">src/main/logs</Property>
+		
+	</Properties>
+	
+	
+	
+	<!-- Appenders: define destination & contain Layouts that define message structure -->
+	<Appenders>
+	
+		<!-- File Appender -->
+		<File name="FILE" fileName="${basePath}/logging.log" append="true">
+		
+			<!-- Layouts: https://sematext.com/blog/log4j2-tutorial/#log4j-2-layouts -->
+			<PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		</File>
+		
+		<!-- Console Appender -->
+		<Console name="STDOUT" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
+		</Console>
+		
+	</Appenders>
+	
+	
+		
+	<!-- Loggers: define the primary object that will log the record -->
+	<Loggers>
+		
+		<!-- a logger definition that inherits from the root definition  -->
+		<Logger name="com.fdmgroup.logging.Log4j2Example" level="debug" />
+		
+		<!-- root logger definition -->
+		<Root level="info">
+			<AppenderRef ref="STDOUT" />
+			<AppenderRef ref="FILE" />
+		</Root>
+		
+	</Loggers>
+	
+</Configuration>

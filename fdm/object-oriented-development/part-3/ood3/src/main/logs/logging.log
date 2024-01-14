@@ -1,0 +1,3 @@
+INFO  | 2024-01-13 12:56:05 | [main] main.Runner (Runner.java:293) - Valid Transaction: Success! Converted cad100.0 to usd76.98446412819399.
+INFO  | 2024-01-13 12:56:05 | [main] main.Runner (Runner.java:293) - Valid Transaction: Success! Converted cad20.0 to eur15.171403718926795.
+INFO  | 2024-01-13 12:56:05 | [main] main.Runner (Runner.java:150) - Invalid Transaction: The two currencies provided are the same.
