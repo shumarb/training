@@ -27,9 +27,9 @@ For every unsuccessful transaction, a message is displayed in the console showin
 The message of every transaction will be stored in a logger called **logging.log**. This file is located in the *src/main/logs* folder.
 
 ## Instructions
-1. If your local machine has not been configured with the `Eclipse IDE`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/EclipseIDEInstallation.md).
-2. If your local machine has not been configured with `Java 17`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/Java17Installation.md).
-3. Download the [zip folder](https://github.com/shumarb/training/blob/main/fdm/object-oriented-development/part-1/sheikhumar_hangman.zip) of the project to your local machine
+1. If your local machine has not been configured with the `Eclipse IDE`, follow the installation instructions [here](https://github.com/shumarb/training/tree/mainblob/main/fdm/software-to-install/EclipseIDEInstallation.md).
+2. If your local machine has not been configured with `Java 17`, follow the installation instructions [here](https://github.com/shumarb/training/tree/mainblob/main/fdm/software-to-install/Java17Installation.md).
+3. Download the [zip folder](https://github.com/shumarb/training/tree/mainblob/main/fdm/object-oriented-development/part-1/sheikhumar_hangman.zip) of the project to your local machine
 4. Unzip the zip file. The unzipped folder is called `ood3`
 5. Open the `Eclipse IDE`.
 6. Select `File`.

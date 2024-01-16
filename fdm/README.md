@@ -5,5 +5,5 @@ This folder contains my projects, answers to assessments, and exercises complete
 
 Course | Skill(s) |
 ------ | ---------|
-[Unix](https://github.com/shumarb/training/tree/main/fdm/unix)                                                  | Shell Scripting, Unix |
-[Object-oriented Development](https://github.com/shumarb/training/tree/main/fdm/object-oriented-development)    | Java                  |
+[Unix](https://github.com/shumarb/training/tree/maintree/main/fdm/unix)                                                  | Shell Scripting, Unix |
+[Object-oriented Development](https://github.com/shumarb/training/tree/maintree/main/fdm/object-oriented-development)    | Java                  |

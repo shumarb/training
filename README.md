@@ -3,6 +3,6 @@ This repository contains a summary of my industry-level training, as well as cou
 
 Content
 -------------------------------------------------------------------------------------------------|
-[FDM Group](https://github.com/shumarb/training/fdm)
-[Massive Open Online Courses (MOOCs)](https://github.com/shumarb/training/tree/main/mooc)
-[Programming](https://github.com/shumarb/training/tree/main/programming)
+[FDM Group](https://github.com/shumarb/training/tree/mainfdm)
+[Massive Open Online Courses (MOOCs)](https://github.com/shumarb/training/tree/maintree/main/mooc)
+[Programming](https://github.com/shumarb/training/tree/maintree/main/programming)
