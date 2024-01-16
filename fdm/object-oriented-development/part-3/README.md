@@ -11,12 +11,12 @@ The system operates based on these three files:
 The dataset relies on these datasets, which are stored in the **src/main/resources** folder: 
 + **fx_rates.json**, which contains information on the currencies. Every **Currency** object is a JSON object where the *name* is the three-lettered currency (example: the Euro currency is denoted as *eur*), and the aforementioned **Currency** object.
 + **users.json**, which contains a map of **User** profiles. Every **User** object has a **name** and a **wallet**. A **wallet** is a map of a **Currency** to the value of the **Currency** (Example: A user named Ali has two currencies in his wallet: 25USD, and 14MYR. Hence, this information will be stored in the wallet as *USD: 25*, *MYR: 14*).
-+ **transactions.txt**, which contains a set of transactions for the system to process. Every line in this file follows this format: *USERNAME* *FROMCURRENCY* *TOCURRENCY* *AMOUNT TO CONVERT FROM THE FROMCURRENCY TO THE TOCURRENCY*
++ **transactions.txt**, which contains a set of transactions for the system to process. Every line in this file follows this format: *USERNAME* *FROMCURRENCY* *TOCURRENCY* *AMOUNT*
 
 The Currency Conversion System works as follows:
 1. Check if the *USER* exists.
 2. Check if the *FROMCURRENCY* AND *TOCURRENCY* are both unique to one another and exists in the aforementioned 148 currencies.
-3. Checks if the *USER* has the *FROMCURRENCY* in his/her wallet, and that the amount of the *FROMCURRENCY*to be converted is less than or equal to the amount of the *FROMCURRENCY* in his/her wallet.
+3. Checks if the *USER* has the *FROMCURRENCY* in his/her wallet, and that the amount of the *FROMCURRENCY* to be converted is less than or equal to the amount of the *FROMCURRENCY* in his/her wallet.
 
 If all three checks are met, proceed with the transaction and the *USER*'s wallet will be updated accordingly. Otherwise, skip the transaction.
 
@@ -26,7 +26,7 @@ For every unsuccessful transaction, a message is displayed in the console showin
 
 The message of every transaction will be stored in a logger called **logging.log**. This file is located in the *src/main/logs* folder.
 
-## How to use this folder
+## Instructions
 1. If your local machine has not been configured with the `Eclipse IDE`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/EclipseIDEInstallation.md).
 2. If your local machine has not been configured with `Java 17`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/Java17Installation.md).
 3. Download the [zip folder](https://github.com/shumarb/training/blob/main/fdm/object-oriented-development/part-1/sheikhumar_hangman.zip) of the project to your local machine
