@@ -1,7 +1,9 @@
 # Training
-This repository contains a summary of my industry-level training, as well as courses I have completed as part of self-study.
 
-Content
+## Overview
+This repository contains a summary of my industry-level training, and practices as part of revision.
+
+Contents
 -------------------------------------------------------------------------------------------------|
 [FDM Group](https://github.com/shumarb/training/tree/main/fdm)
 [Massive Open Online Courses (MOOCs)](https://github.com/shumarb/training/tree/main/mooc)

@@ -8,7 +8,7 @@ The system operates based on these three files:
 + **User.java**, which represents **User** objects based on information derived from deserialising the **users.json** file.
 + **Runner.java**, which demonstrates how the **Currency** and **User** objects interact with one another.
  
-The dataset relies on these datasets, which are stored in the **src/main/resources** folder: 
+The system works on these datasets, which are stored in the **src/main/resources** folder: 
 + **fx_rates.json**, which contains information on the currencies. Every **Currency** object is a JSON object where the *name* is the three-lettered currency (example: the Euro currency is denoted as *eur*), and the aforementioned **Currency** object.
 + **users.json**, which contains a map of **User** profiles. Every **User** object has a **name** and a **wallet**. A **wallet** is a map of a **Currency** to the value of the **Currency** (Example: A user named Ali has two currencies in his wallet: 25USD, and 14MYR. Hence, this information will be stored in the wallet as *USD: 25*, *MYR: 14*).
 + **transactions.txt**, which contains a set of transactions for the system to process. 
