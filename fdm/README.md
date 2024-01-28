@@ -1,7 +1,7 @@
 ## FDM Group
 
 ## Overview
-This folder illustrates the training I have completed under the [Technical Graduate (Software Development) Programme](https://www.fdmgroup.com/en-sg/sg-careers/graduates/technical/software-development/) at FDM Group in Singapore.
+This folder illustrates the training I have completed under the [Software Development Graduate Programme](https://www.fdmgroup.com/en-sg/sg-careers/graduates/technical/software-development/) at FDM Group in Singapore.
 
 Course | Skill(s) |
 ------ | ---------|
