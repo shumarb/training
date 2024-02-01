@@ -41,7 +41,7 @@ import org.apache.logging.log4j.LogManager;
  * The automated currency conversion system works as follows:
  * 
  * 1. The program validates at least one transaction.
- * Every transaction has four fields:
+ * Every transaction has four components:
  * 1.1. The user's name.
  * 1.2. The currency to be converted from (fromCurrency).
  * 1.3. The currency to be converted to (toCurrency).
@@ -86,7 +86,7 @@ public class Runner {
 	 * For every outcome of a transaction, 
 	 * display its output in console and log it in a logger file
 	 */
-	private static void validateTransactions() {
+	private static void validateTransactions() throws StreamReadException, DatabindException, IOException {
 		/*
 		 * Using try-with-resources ensure the resources are automatically closed
 		 * after usage. This prevents resource leaks.
@@ -111,7 +111,7 @@ public class Runner {
 	            	/*
 	            	 * A transaction comprises of every line in the transaction.txt file.
 	            	 * 
-	            	 * Every transaction comprises of four fields:
+	            	 * Every transaction comprises of four components:
 	            	 * name, from currency, to currency, and amount of from currency to convert to the to currency
 	            	 * 
 	            	 * Split the transaction using the white space to create an array comprising of these four attributes
@@ -127,88 +127,113 @@ public class Runner {
 	            	 * transactionInformation[3]: amount of from currency to convert into the to currency
 	            	 */
 	                String[] transactionInformation = transaction.split(" ");
-	                String userName = transactionInformation[0];
+	                
 	                
 	                /*
-	                 * 1. Check if user exists.
-	                 * Invalid transaction if user does not exist
+	                 * 1. Check if transaction has exactly 4 fields.
+	                 * Skipped transaction if it does not have 4 fields
 	                 */
-	                if (getsUser(userName) == null) {
+	                if (transactionInformation.length == 4) {
 	                	
-	                	logger.info("Invalid Transaction: " + userName + " does not exist.");
-	                	
-	                } else {
-	                	/* 
-	                	 * 2. Check if to and from currencies are the same
-	                	 * Invalid transaction of these two currencies are the same
+	                	/*
+	                	 * 2. Check if user exists
+	                	 * Skipped transaction if user does not exist
 	                	 */
-	                	String fromCurrency = transactionInformation[1];
-	                	String toCurrency = transactionInformation[2];
-	                	
-	                	if (isSameCurrency(toCurrency, fromCurrency)) {
-	                		
-	                		logger.info("Invalid Transaction: The two currencies provided are the same.");
-	                		
-	                	} else {
+	                	String username = transactionInformation[0];
+	                	User user = getsUser(username);
+	                	if (user != null) {
 	                		
 	                		/*
-	                		 * 3. Check if either one or both currencies exists
-	                		 * and neither of the currencies are usd
-	                		 * Invalid transaction if either one or both currencies do not exist
+	                		 * 3. Check if currencies provided both exist
+	                		 * Skipped transaction if either one or both do not exist
 	                		 */
-	                		if (!doesCurrencyExist(fromCurrency) && doesCurrencyExist(toCurrency)) {
-	                			
-	                			logger.info("Invalid Transaction: The currency " + fromCurrency + " does not exist on the foreign exchange.");
-	                			
-	                		} else if (doesCurrencyExist(fromCurrency) && !doesCurrencyExist(toCurrency)) {
-	                			
-	                			logger.info("Invalid Transaction: The currency " + toCurrency + " does not exist on the foreign exchange.");
-	                		
-	                		} else if (!doesCurrencyExist(fromCurrency) && !doesCurrencyExist(toCurrency)) {
-	                			
-	                			logger.info("Invalid Transaction: Both currencies " + fromCurrency + " and " + toCurrency + " do not exist on the foreign exchange.");
-	                		
-	                		} else {
-	                			/*
-	                			 * 4. Checks if amount to be converted from the from currency to the to currency is valid
-	                			 * Invalid transaction if amount is <= 0
-	                			 */
-	                			double amountToConvert = Double.parseDouble(transactionInformation[3]);
-	                			if (!isValidAmount(amountToConvert)) {
-	                				
-	                				logger.info("Invalid Transaction: Amount to convert is less than or equal to " + fromCurrency + "0.");
-	                			
-	                			} else {
+	                		String fromCurrency = transactionInformation[1];
+	                		String toCurrency = transactionInformation[2];
+	      
+	                		if (doesCurrencyExist(fromCurrency) && doesCurrencyExist(toCurrency)) {
+	                			/* 
+			                	 * 4. Check if both fromCurrency and toCurrency are the same
+			                	 * Skipped transaction of these two currencies are the same
+			                	 */
+	                			if (!isSameCurrency(toCurrency, fromCurrency)) {
+			                		
 	                				/*
-	                				 * 5. Check if user has the from currency in his/her wallet
-	                				 * Invalid transaction if user does not have the from currency in his/her wallet
-	                				 */
-	                				if (!doesUserHaveCurrency(userName, fromCurrency)) {
-	                					
-		                				logger.info("Invalid Transaction: " + userName + " does not have the currency to be converted from.");
-	                				
-	                				} else {
-	                					/*
-		                				 * 6. Check if value of from currency in user's wallet is more than or equal to
-		                				 * the amount to be converted to
-		                				 * Invalid transaction if the from currency in user's wallet is less than the amount to be converted to
+		                			 * 5. Checks if amount to be converted from the fromCurrency to the toCurrency is valid
+		                			 * Skipped transaction if amount is <= 0
+		                			 */
+		                			double amountToConvert = Double.parseDouble(transactionInformation[3]);
+		                			if (isValidAmount(amountToConvert)) {
+		                				
+		                				/*
+		                				 * 6. Check if user has the fromCurrency in his/her wallet
+		                				 * Skipped transaction if user does not have the from currency in his/her wallet
 		                				 */
-	                					if (!isSufficientAmountForConversion(userName, fromCurrency, amountToConvert)) {
-	                						
-			                				logger.info("Invalid Transaction: " + userName + " does not enough " + fromCurrency + " for conversion.");
-	                					
-	                					} else {
-	                						
-	                						/*
-	                						 * Transaction is valid. Proceed with conversion
-	                						 */
-	                						currencyConversion(userName, fromCurrency, toCurrency, amountToConvert);
-	                						
-	                					}
-	                				}
-	                			}
+		                				if (doesUserHaveCurrency(user, fromCurrency)) {
+		                					/*
+			                				 * 7. Check if value of fromCurrency in user's wallet is more than or equal to the amount specified for conversion
+			                				 * Skipped transaction if the from currency in user's wallet is less than the amount to be converted to
+			                				 */
+		                					if (isSufficientAmountForConversion(user, fromCurrency, amountToConvert)) {
+		                						
+		                						/*
+		                						 * 8. Transaction is valid. Proceed with conversion
+		                						 * then update users.json via Serialization
+		                						 */
+		                						currencyConversion(user, fromCurrency, toCurrency, amountToConvert);
+		                					
+		                					} else {
+		                						
+		                						logger.error("Skipped Transaction: " + username + " does not enough " + fromCurrency + " for conversion.");
+		                						
+		                					}
+		                					
+		                				} else {
+		                					
+		                					logger.error("Skipped Transaction: " + username + " does not have the currency to be converted from.");
+		                				}
+		                			
+		                			} else {
+		                				
+		                				logger.error("Skipped Transaction: Amount to convert is less than or equal to " + fromCurrency + "0.");
+		                			
+		                			}
+	                				
+			                	} else {
+			                		
+			                		logger.error("Skipped Transaction: The two currencies provided are the same.");
+			                	}
+	                			
+	                		} else {
+	                			
+	                			/*
+	                			 * 3.1. The fromCurrency exists but not the toCurrency
+	                			 */
+	                			if (doesCurrencyExist(fromCurrency) && !doesCurrencyExist(toCurrency)) {
+		                			
+		                			logger.error("Skipped Transaction: The currency " + toCurrency + " does not exist on the foreign exchange.");
+		                		
+		                		} else if (!doesCurrencyExist(fromCurrency) && doesCurrencyExist(toCurrency)) {
+		                			/*
+		                			 * 3.2. The toCurrency exists but not the fromCurrency
+		                			 */
+		                			logger.error("Skipped Transaction: The currency " + fromCurrency + " does not exist on the foreign exchange.");
+		                		
+		                		} else {
+		                			/*
+		                			 * 3.3. Both the fromCurrency and toCurrency do not exist
+		                			 */
+		                			logger.error("Skipped Transaction: Both currencies " + fromCurrency + " and " + toCurrency + " do not exist on the foreign exchange.");
+		                		}
 	                		}
+	                			
+	                	} else {
+	                		
+	                		logger.error("Skipped Transaction: User named " + username + " does not exist.");
 	                	}
+	                	
+	                } else {
+	                	
+	                	logger.error("Skipped Transaction: Transaction has " + transactionInformation.length + " components instead of 4 components as required.");
 	                }
 	                
 	            }
@@ -250,22 +275,24 @@ public class Runner {
 	 * @params: user's name, currency to be converted from (fromCurrency), currency to be converted to (toCurrency), 
 	 * and amount of fromCurrency to be converted to toCurrency
 	 */
-	public static void currencyConversion(String userName, String fromCurrency, String toCurrency, double amountToConvert) {
+	public static void currencyConversion(User user, String fromCurrency, String toCurrency, double amountToConvert) throws StreamReadException, DatabindException, IOException {
 		
 		double amountToIncreaseToCurrencyBy = 0;
-		User user = getsUser(userName);
 		
 		// 1. Conversion of currency
 		
 		// 1.1. toCurrency is in usd
 		if (toCurrency.equals("usd")) {
+			
 			// 1.1.1. Get usd equivalent of amountToConvert
 			amountToIncreaseToCurrencyBy = convertAmountToUsd(fromCurrency, amountToConvert);
+			
 		} else if (fromCurrency.equals("usd")) {
 			// 1.2. fromCurrency is in usd
 			
 			// 1.2.1. Compute the equivalent of the fromCurrency in usd
 			amountToIncreaseToCurrencyBy = convertAmountFromUsd(toCurrency, amountToConvert);
+			
 		} else {
 			// 1.3. Both fromCurrency and toCurrency are not usd
 			
@@ -291,23 +318,19 @@ public class Runner {
 		
 		// 4. Display message to indicate conversion of currencies has been successfully completed
 		logger.info("Valid Transaction: Success! Converted " + fromCurrency + amountToConvert + " to " + toCurrency + amountToIncreaseToCurrencyBy + ".");
-	
+		
+		// 5. Update user's profile in users.json with updated values and currencies in wallet
+		serialization(user);
 	}
-
+	
 	/*
 	 * Checks if a user has enough value in the from currency for conversion (fromCurrency)
 	 * 
 	 * @params: user's name, currency to be converted from, and amount of currency to be converted from
 	 */
-	public static boolean isSufficientAmountForConversion(String userName, String fromCurrency, double amountToConvert) {
+	public static boolean isSufficientAmountForConversion(User user, String fromCurrency, double amountToConvert) {
 		
-		// 1. Retrieve user profile 
-		User user = getsUser(userName);
-		
-		// 2. Check if the value of the currency in the wallet is greater than
-		// or equal to the amount to convert
 		return user.getCurrencyValueInWallet(fromCurrency) >= amountToConvert;
-	
 	}
 
 	/*
@@ -316,12 +339,8 @@ public class Runner {
 	 * @params user's name, and currency that user wants to convert from
 	 * @return true if user has currency to be converted from, false otherwise
 	 */
-	public static boolean doesUserHaveCurrency(String userName, String fromCurrency) {
+	public static boolean doesUserHaveCurrency(User user, String fromCurrency) {
 		
-		// 1. Retrieve user based on the user's name
-		User user = getsUser(userName);
-		
-		// 2. Checks if the fromCurrency is in the user's wallet
 		return user.isCurrencyInWallet(fromCurrency);
 	}
 
@@ -333,7 +352,7 @@ public class Runner {
 	 */
 	public static boolean isValidAmount(double amountToConvert) {
 		
-		return (amountToConvert > 0) ? true : false;
+		return amountToConvert > 0;
 	}
 
 	/*
@@ -367,25 +386,50 @@ public class Runner {
 
 	/*
 	 * Check if the user exists in the usersList
+	 * by checking that a user's name matches name provided
 	 * 
 	 * @params: name of user
 	 * @return: result of whether the user exists in the usersList
 	 */
 	public static User getsUser(String name) {
 		
-		for (User user : usersList) {
-			if (user.getName().equals(name)) {
-				return user;
+		for (int i = 0; i < usersList.size(); i++) {
+			User currentUser = usersList.get(i);
+			if (currentUser.getName().equals(name)) {
+				return currentUser;
 			}
-		}	
+		}
 		
 		return null;
 	}
+	
+	/*
+	 * Serialization is the process of converting a Java object to a data format.
+	 * In this case, the data format is JSON.
+	 * 
+	 * Execute serialization for users.json after a valid transaction
+	 * in order to update the user's profile
+	 * 
+	 * @args User of valid currency conversion transaction
+	 * @throws StreamReadException, DatabindException, IOException
+	 */
+	private static void serialization(User user) {
+		
+		File destination = new File(USERS_FILE);
+		ObjectMapper objectMapper = new ObjectMapper();
+
+		try {
+            objectMapper.writeValue(destination, usersList);
+        } catch (IOException e) {
+        	logger.error("Unable to update the users.json file.");
+        }
+	}
+	
 
 	/*
 	 * Deserialization is the process of converting JSON objects into Java object
 	 * 
-	 * Execute deserialization for for fx_rates.json and users.json
+	 * Execute deserialization for fx_rates.json and users.json
 	 * Before processing transactions.txt
 	 * 
 	 * @throws StreamReadException, DatabindException, IOException
@@ -426,6 +470,7 @@ public class Runner {
 	public static void main(String[] args) {
 		
 		try {    
+			
 				/*
 				 * 1. Deserialize the users.json and fx_rates.json files
 				 * to populate the users list and currencies map respectively.

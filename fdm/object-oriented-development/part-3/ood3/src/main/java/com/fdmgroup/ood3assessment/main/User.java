@@ -14,6 +14,8 @@ package com.fdmgroup.ood3assessment.main;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class User {
 
 	/*
@@ -186,11 +188,11 @@ public class User {
 	 * 
 	 * @return -1 if user's wallet is null, else a non-negative number
 	 */
+	@JsonIgnore
 	public int getsNumberOfCurrenciesInWallet() {
-		if (this.wallet == null) {
-			return -1;
-		}
-		return this.wallet.size();
+		
+		return this.wallet == null ? -1 : this.wallet.size();
+		
 	}
-
+	
 }

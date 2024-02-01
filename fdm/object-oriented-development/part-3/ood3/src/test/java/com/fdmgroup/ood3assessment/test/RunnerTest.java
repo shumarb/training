@@ -2,6 +2,7 @@ package com.fdmgroup.ood3assessment.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -9,6 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
 import com.fdmgroup.ood3assessment.main.Currency;
 import com.fdmgroup.ood3assessment.main.Runner;
 import com.fdmgroup.ood3assessment.main.User;
@@ -188,126 +191,126 @@ class RunnerTest {
 	@Test
 	public void test_doesUserHaveCurrencyReturnsTrue_whenUserHasCurrency() {
 		
-		assertEquals(true, Runner.doesUserHaveCurrency("Ali", "eur"));
+		assertEquals(true, Runner.doesUserHaveCurrency(user1, "eur"));
 		
 	}
 	
 	@Test
 	public void test_doesUserHaveCurrencyDoesNotReturnFalse_whenUserHasCurrency() {
 		
-		assertNotEquals(false, Runner.doesUserHaveCurrency("Ali", "eur"));
+		assertNotEquals(false, Runner.doesUserHaveCurrency(user1, "eur"));
 		
 	}
 	
 	@Test
 	public void test_doesUserHaveCurrencyReturnsFalse_whenUserDoesNotHaveCurrency() {
 		
-		assertEquals(false, Runner.doesUserHaveCurrency("Ali", "sgd"));
+		assertEquals(false, Runner.doesUserHaveCurrency(user1, "sgd"));
 		
 	}
 	
 	@Test
 	public void test_doesUserHaveCurrencyDoesNotReturnTrue_whenUserDoesNotHaveCurrency() {
 		
-		assertNotEquals(true, Runner.doesUserHaveCurrency("Ali", "sgd"));
+		assertNotEquals(true, Runner.doesUserHaveCurrency(user1, "sgd"));
 		
 	}
 	
 	@Test
 	public void test_isSufficientAmountForConversionReturnsTrue_forSufficientAmount() {
 		
-		assertEquals(true, Runner.isSufficientAmountForConversion("Ali", "eur", 5));
+		assertEquals(true, Runner.isSufficientAmountForConversion(user1, "eur", 5));
 		
 	}
 	
 	@Test
 	public void test_isSufficientAmountForConversionDoesNotReturnFalse_forSufficientAmount() {
 		
-		assertNotEquals(false, Runner.isSufficientAmountForConversion("Ali", "eur", 5));
+		assertNotEquals(false, Runner.isSufficientAmountForConversion(user1, "eur", 5));
 	}
 	
 	@Test
 	public void test_isSufficientAmountForConversionReturnsFalse_forInsufficientAmount() {
 		
-		assertEquals(false, Runner.isSufficientAmountForConversion("Ali", "eur", 500));
+		assertEquals(false, Runner.isSufficientAmountForConversion(user1, "eur", 500));
 		
 	}
 	
 	@Test
 	public void test_isSufficientAmountForConversionDoesNotReturnTrue_forInsufficientAmount() {
 		
-		assertNotEquals(true, Runner.isSufficientAmountForConversion("Ali", "eur", 500));
+		assertNotEquals(true, Runner.isSufficientAmountForConversion(user1, "eur", 500));
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forAllAmountOfNonUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyReducedByOne() {
+	public void test_conversionOfCurrency_forAllAmountOfNonUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyReducedByOne() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "eur", "gbp", 88.0);
+		Runner.currencyConversion(user2, "eur", "gbp", 88.0);
 		assertEquals(numberOfCurrenciesBeforeConversion - 1, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forAllAmountOfUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyReducedByOne() {
+	public void test_conversionOfCurrency_forAllAmountOfUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyReducedByOne() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "usd", "gbp", 40.0);
+		Runner.currencyConversion(user2, "usd", "gbp", 40.0);
 		assertEquals(numberOfCurrenciesBeforeConversion - 1, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forAllAmountOfNonUsdCurrencyInWallet_toUsdCurrencyInWallet_totalCurrencyReducedByOne() {
+	public void test_conversionOfCurrency_forAllAmountOfNonUsdCurrencyInWallet_toUsdCurrencyInWallet_totalCurrencyReducedByOne() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "gbp", "usd", 1331.4);
+		Runner.currencyConversion(user2, "gbp", "usd", 1331.4);
 		assertEquals(numberOfCurrenciesBeforeConversion - 1, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyRemainsTheSame() {
+	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toAnotherNonUsdCurrencyInWallet_totalCurrencyRemainsTheSame() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "eur", "gbp", 22.5);
+		Runner.currencyConversion(user2, "eur", "gbp", 22.5);
 		assertEquals(numberOfCurrenciesBeforeConversion, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toUsdCurrencyInWallet_totalCurrencyRemainsTheSame() {
+	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toUsdCurrencyInWallet_totalCurrencyRemainsTheSame() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "eur", "usd", 22.5);
+		Runner.currencyConversion(user2, "eur", "usd", 22.5);
 		assertEquals(numberOfCurrenciesBeforeConversion, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forSomeAmountOfUsdInWallet_toNonUsdCurrencyInWallet_totalCurrencyRemainsTheSame() {
+	public void test_conversionOfCurrency_forSomeAmountOfUsdInWallet_toNonUsdCurrencyInWallet_totalCurrencyRemainsTheSame() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "usd", "eur", 20);
+		Runner.currencyConversion(user2, "usd", "eur", 20);
 		assertEquals(numberOfCurrenciesBeforeConversion, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toNonUsdCurrencyNotInWallet_totalCurrencyIncreasedByOne() {
+	public void test_conversionOfCurrency_forSomeAmountOfNonUsdCurrencyInWallet_toNonUsdCurrencyNotInWallet_totalCurrencyIncreasedByOne() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "gbp", "jpy", 22.5);
+		Runner.currencyConversion(user2, "gbp", "jpy", 22.5);
 		assertEquals(numberOfCurrenciesBeforeConversion + 1, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
 	
 	@Test
-	public void test_conversionOfCurrency_forSomeAmountOfUsdCurrencyInWallet_toNonUsdCurrencyNotInWallet_totalCurrencyIncreasedByOne() {
+	public void test_conversionOfCurrency_forSomeAmountOfUsdCurrencyInWallet_toNonUsdCurrencyNotInWallet_totalCurrencyIncreasedByOne() throws StreamReadException, DatabindException, IOException {
 		
 		int numberOfCurrenciesBeforeConversion = user2.getsNumberOfCurrenciesInWallet();
-		Runner.currencyConversion("John", "usd", "jpy", 12);
+		Runner.currencyConversion(user2, "usd", "jpy", 12);
 		assertEquals(numberOfCurrenciesBeforeConversion + 1, user2.getsNumberOfCurrenciesInWallet());
 		
 	}
