@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
 
-	<!-- can be used to define variable constants -->
-	<Properties>
-	
-		<!-- in relation to the current location i.e. src/main/logs -->
-		<!-- creates a variable that can be referenced elsewhere in the configuration -->
-		<Property name="basePath">src/main/logs</Property>
-		
-	</Properties>
-	
-	
-	
 	<!-- Appenders: define destination & contain Layouts that define message structure -->
 	<Appenders>
 	
 		<!-- File Appender -->
-        <File name="FILE" fileName="${basePath}/logging.log" append="true">
+        <File name="FILE" fileName="src/main/resources/logging.log" append="true">
 
             <!-- Layouts: https://sematext.com/blog/log4j2-tutorial/#log4j-2-layouts -->
-            <PatternLayout pattern="%-5p | [%t] %C{2} (%F:%L) - %m%n" />
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} | %-5level | %msg%n"/>
         </File>
 
         <!-- Console Appender -->

@@ -7,7 +7,7 @@
  */
 
 
-package com.fdmgroup.ood3assessment.main;
+package main;
 
 public class Currency {
 

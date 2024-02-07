@@ -1,3 +1,0 @@
-Bob cad usd 100
-Susan cad eur 20
-Tommy usd usd 1000

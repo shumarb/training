@@ -28,7 +28,7 @@ For every skipped transaction, the console displays a message that the transacti
 ## Instructions
 1. If your local machine has not been configured with the `Eclipse IDE`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/EclipseIDEInstallation.md).
 2. If your local machine has not been configured with `Java 17`, follow the installation instructions [here](https://github.com/shumarb/training/blob/main/fdm/software-to-install/Java17Installation.md).
-3. Download the [zip folder](https://github.com/shumarb/projects/blob/main/projects/currency-conversion-system/currency-conversion-system.zip) of the project to your local machine.
+3. Download the [zip folder](https://git.fdmgroup.com/umar.banafe/currency-conversion-system/currency-conversion-system.zip) of the project to your local machine.
 4. Unzip the zip file. The unzipped folder is called `currency-conversion-system`.
 5. Open the `Eclipse IDE`.
 6. Select `File`.

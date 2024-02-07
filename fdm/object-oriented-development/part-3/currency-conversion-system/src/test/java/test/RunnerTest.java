@@ -1,4 +1,4 @@
-package com.fdmgroup.ood3assessment.test;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,9 +12,10 @@ import org.mockito.Mock;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
-import com.fdmgroup.ood3assessment.main.Currency;
-import com.fdmgroup.ood3assessment.main.Runner;
-import com.fdmgroup.ood3assessment.main.User;
+
+import main.Currency;
+import main.Runner;
+import main.User;
 
 class RunnerTest {
 	
@@ -110,10 +111,49 @@ class RunnerTest {
 	}
 	
 	@Test
-	public void testUserExistReturnsUser() {
+	public void testUserExist_returnsCorrectUser() {
 		
 		Runner.usersList.add(user1);
 		assertEquals(user1, Runner.getsUser("Ali"));
+		
+	}
+	
+	@Test
+	public void testUserExist_doesNotReturnNull() {
+		
+		Runner.usersList.add(user1);
+		assertNotEquals(null, Runner.getsUser("Ali"));
+		
+	}
+	
+	@Test
+	public void testUserExist_doesNotReturnIncorrectUser() {
+		
+		Runner.usersList.add(user1);
+		Runner.usersList.add(user2);
+		assertNotEquals(user2, Runner.getsUser("Ali"));
+		
+	}
+	
+	@Test
+	public void testUserDoesNotExist_returnsNull() {
+		
+		assertEquals(null, Runner.getsUser("William"));
+		
+	}
+	
+	@Test
+	public void testUserDoesNotExist_doesNotReturnNonNullValue() {
+		
+		Runner.usersList.add(user1);
+		assertNotEquals(null, Runner.getsUser("Ali"));
+		
+	}
+	
+	@Test
+	public void testUserDoesNotExist_doesNotReturnExistingUser() {
+		
+		assertNotEquals(null, Runner.getsUser("Ali"));
 		
 	}
 
@@ -144,25 +184,25 @@ class RunnerTest {
 	@Test
 	public void test_doesCurrencyExistReturnsTrue_forExistentCurrency() {
 		
-		assertEquals(true, Runner.doesCurrencyExist("eur"));
+		assertEquals(true, Runner.isValidCurrency("eur"));
 	}
 	
 	@Test
 	public void test_doesCurrencyExistDoesNotReturnFalse_forExistentCurrency() {
 		
-		assertNotEquals(false, Runner.doesCurrencyExist("eur"));
+		assertNotEquals(false, Runner.isValidCurrency("eur"));
 	}
 	
 	@Test
 	public void test_doesCurrencyExistReturnFalse_forNonExistentCurrency() {
 		
-		assertEquals(false, Runner.doesCurrencyExist("afaefae"));
+		assertEquals(false, Runner.isValidCurrency("afaefae"));
 	}
 	
 	@Test
 	public void test_doesCurrencyExistDoesNotReturnTrue_forNonExistentCurrency() {
 		
-		assertNotEquals(true, Runner.doesCurrencyExist("afaefae"));
+		assertNotEquals(true, Runner.isValidCurrency("afaefae"));
 	}
 	
 	@Test
@@ -177,7 +217,7 @@ class RunnerTest {
 	}
 	
 	@Test
-	public void test_isValidAmountReturnsFalse_forInalidAmount() {
+	public void test_isValidAmountReturnsFalse_forInvalidAmount() {
 		
 		assertEquals(false, Runner.isValidAmount(-10));
 	}

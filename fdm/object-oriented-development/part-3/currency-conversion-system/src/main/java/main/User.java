@@ -9,8 +9,9 @@
  */
 
 
-package com.fdmgroup.ood3assessment.main;
+package entities;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -110,8 +111,9 @@ public class User {
 	 */
 	public void increaseCurrencyValueInWallet(String currency, double amountOfIncrease) {
 		
-		double newAmount = this.wallet.getOrDefault(currency, 0.0) + amountOfIncrease;
-		this.wallet.put(currency, newAmount);
+		DecimalFormat df = new DecimalFormat("#.##");
+		String newAmount = df.format(this.wallet.getOrDefault(currency, 0.0) + amountOfIncrease);
+		this.wallet.put(currency, Double.valueOf(newAmount));
 		
 	}
 	
@@ -123,10 +125,11 @@ public class User {
 	 */
 	public void decreaseCurrencyValueInWallet(String currency, double amountOfDecrease) {
 		
+		DecimalFormat df = new DecimalFormat("#.##");
 		if (this.wallet.containsKey(currency)) {
 			double currentAmount = this.wallet.get(currency);
-			double newAmount = currentAmount - amountOfDecrease;
-			this.wallet.put(currency, newAmount);
+			String newAmount = df.format(currentAmount - amountOfDecrease);
+			this.wallet.put(currency, Double.valueOf(newAmount));
 		}
 		
 	}

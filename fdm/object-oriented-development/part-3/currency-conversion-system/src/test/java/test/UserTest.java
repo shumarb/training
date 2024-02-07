@@ -1,4 +1,4 @@
-package com.fdmgroup.ood3assessment.test;
+package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
-import com.fdmgroup.ood3assessment.main.User;
+import main.User;
 
 class UserTest {
 
@@ -64,7 +64,7 @@ class UserTest {
 	}
 	
 	@Test
-	public void test_currencyAddedToWallet_returnsTrue_afterAddingToWallet() {
+	public void test_currencyAddedToWallet_returnsTrue_afterAddingCurrencyToWallet() {
 		
 		user1.addCurrencyToWallet("cad", 42);
 		assertEquals(user1.isCurrencyInWallet("cad"), true);
@@ -72,7 +72,7 @@ class UserTest {
 	}
 	
 	@Test
-	public void test_currencyAddedToWallet_doesNotreturnFalse_afterAddingToWallet() {
+	public void test_currencyAddedToWallet_doesNotReturnFalse_afterAddingCurrencyToWallet() {
 		
 		user1.addCurrencyToWallet("cad", 42);
 		assertNotEquals(user1.isCurrencyInWallet("cad"), false);

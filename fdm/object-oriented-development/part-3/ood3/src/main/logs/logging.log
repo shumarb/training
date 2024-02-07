@@ -1,3 +1,0 @@
-INFO  | [main] main.Runner (Runner.java:320) - Valid Transaction: Success! Converted cad100.0 to usd76.98446412819399.
-INFO  | [main] main.Runner (Runner.java:320) - Valid Transaction: Success! Converted cad20.0 to eur15.171403718926795.
-ERROR | [main] main.Runner (Runner.java:203) - Skipped Transaction: The two currencies provided are the same.
