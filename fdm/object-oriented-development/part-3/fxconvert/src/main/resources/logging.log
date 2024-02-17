@@ -1,0 +1,3 @@
+10:03:37.125 | INFO  | Valid Transaction: Success! Converted cad100 to usd76.98 for Bob.
+10:03:37.147 | INFO  | Valid Transaction: Success! Converted cad20 to eur15.17 for Susan.
+10:03:37.150 | ERROR | Skipped Transaction: Both the FROM and TO currencies are the same.
