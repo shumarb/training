@@ -1,5 +1,3 @@
-package programming.leetcode.easy;
-
 class Solution {
     public int findNumbers(int[] nums) {
         int total = 0;
