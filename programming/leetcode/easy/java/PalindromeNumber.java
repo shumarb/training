@@ -1,5 +1,3 @@
-package programming.leetcode.easy;
-
 class Solution {
     
     public boolean isPalindrome(int x) {
