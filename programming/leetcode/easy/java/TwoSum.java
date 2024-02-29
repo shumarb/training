@@ -1,5 +1,3 @@
-package programming.leetcode.easy;
-
 import java.util.HashMap;
 
 class Solution {
