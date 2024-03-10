@@ -7,6 +7,7 @@ LeetCode profile: https://leetcode.com/shumarb/
 ## Easy
 Problem | Code | Runtime | Ranking |
 --------| ---- | ------- | ------- |
+[Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ConcatenationOfArrays.java) | 1ms | 96.28% |
 [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindNumbersWithEvenNumberOfDigits.java) | 1ms | 98.93% |
 [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/PalindromeNumber.java) | 8ms | 19.99% |
 [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ReverseLinkedList.java) | 0ms | 94.45% |
