@@ -14,6 +14,7 @@ Problem | Code | Runtime | Ranking |
 [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/SquaresOfASortedArray.java) | 2ms | 53.45% |
 [To Lower Case](https://leetcode.com/problems/to-lower-case/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ToLowerCase.java) | 0ms | 100% |
 [Two Sum](https://leetcode.com/problems/two-sum/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/TwoSum.java) | 1ms | 98.25% |
+[Big Countries](https://leetcode.com/problems/big-countries/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/big_countries.sql) | 461ms | 66.33% |
 
 ## Medium
 Problem | Code  | Runtime | Ranking |
