@@ -7,6 +7,7 @@ LeetCode profile: https://leetcode.com/shumarb/
 ## Easy
 Problem | Code | Runtime | Ranking |
 --------| ---- | ------- | ------- |
+[Check If N And Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/CheckIfNAndItsDoubleExist.java) | 2ms | 94.12% |
 [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ConcatenationOfArrays.java) | 1ms | 96.28% |
 [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindNumbersWithEvenNumberOfDigits.java) | 1ms | 98.93% |
 [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/PalindromeNumber.java) | 8ms | 19.99% |
@@ -15,6 +16,7 @@ Problem | Code | Runtime | Ranking |
 [To Lower Case](https://leetcode.com/problems/to-lower-case/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ToLowerCase.java) | 0ms | 100% |
 [Two Sum](https://leetcode.com/problems/two-sum/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/TwoSum.java) | 1ms | 98.25% |
 [Big Countries](https://leetcode.com/problems/big-countries/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/big_countries.sql) | 461ms | 66.33% |
+[Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20% 
 
 ## Medium
 Problem | Code  | Runtime | Ranking |
