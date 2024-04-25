@@ -19,7 +19,6 @@ Problem | Code | Runtime | Ranking |
 [Big Countries](https://leetcode.com/problems/big-countries/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/big_countries.sql) | 461ms | 66.33% |
 [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/customers_who_never_order.sql) | 908ms | 93.29% |
 [Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20% 
-[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/second_highest_salary.sql) | 480ms | 64.38% 
 
 ## Medium
 Problem | Code  | Runtime | Ranking |
