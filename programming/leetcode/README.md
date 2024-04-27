@@ -17,8 +17,10 @@ Problem | Code | Runtime | Ranking |
 [To Lower Case](https://leetcode.com/problems/to-lower-case/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ToLowerCase.java) | 0ms | 100% |
 [Two Sum](https://leetcode.com/problems/two-sum/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/TwoSum.java) | 1ms | 98.25% |
 [Big Countries](https://leetcode.com/problems/big-countries/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/big_countries.sql) | 461ms | 66.33% |
+[Classes More Than 5 Students](https://leetcode.com/problems/classes-more-than-5-students/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/classes_more_than_5_students.sql) | 471ms | 96.18% |
 [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/customers_who_never_order.sql) | 908ms | 93.29% |
-[Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20% 
+[Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20%
+[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/second_highest_salary.sql) | 480ms | 64.38%
 
 ## Medium
 Problem | Code  | Runtime | Ranking |
