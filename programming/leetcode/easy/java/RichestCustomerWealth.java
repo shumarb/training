@@ -1,4 +1,3 @@
-// Link: https://leetcode.com/problems/richest-customer-wealth/description/
 class Solution {
     public int maximumWealth(int[][] accounts) {
         int wealth = 0;
