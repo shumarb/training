@@ -1,4 +1,3 @@
-// https://leetcode.com/problems/sort-the-people/description/
 class Solution {
 
     public void swap(String[] names, int[] heights, int i, int j) {
