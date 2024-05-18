@@ -7,6 +7,7 @@ LeetCode profile: https://leetcode.com/shumarb/
 ## Easy
 Problem | Code | Runtime | Ranking |
 --------| ---- | ------- | ------- |
+[Add Digits](https://leetcode.com/problems/add-digits/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/AddDigits.java) | 0ms | 52.12% |
 [Check If N And Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/CheckIfNAndItsDoubleExist.java) | 2ms | 94.12% |
 [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ConcatenationOfArrays.java) | 1ms | 96.28% |
 [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindNumbersWithEvenNumberOfDigits.java) | 1ms | 98.93% |
