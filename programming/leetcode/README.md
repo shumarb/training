@@ -12,6 +12,7 @@ Problem | Code | Runtime | Ranking |
 [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ConcatenationOfArrays.java) | 1ms | 96.28% |
 [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindNumbersWithEvenNumberOfDigits.java) | 1ms | 98.93% |
 [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | [Java](IndexOfFirstOccurrenceInString.java) | 0ms | 100% |
+[FizzBuzz](https://leetcode.com/problems/fizz-buzz/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FizzBuzz.java) | 1ms | 99.29% |
 [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/PalindromeNumber.java) | 8ms | 19.99% |
 [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/SortThePeople.java) | 4ms | 98.74% |
 [Sort the People](https://leetcode.com/problems/sort-the-people/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ReverseLinkedList.java) | 0ms | 94.45% |
