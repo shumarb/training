@@ -26,11 +26,11 @@ Problem | Code | Runtime | Ranking |
 [Combine Two Tables](https://leetcode.com/problems/combine-two-tables/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/combine_two_tables.sql) | 629ms | 96.12% |
 [Customers Who Never Order](https://leetcode.com/problems/customers-who-never-order/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/customers_who_never_order.sql) | 908ms | 93.29% |
 [Customers Placing The Largest Number Of Orders](https://leetcode.com/problems/customer-placing-the-largest-number-of-orders/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/customers_placing_the_largest_number_of_orders.sql) | 799ms | 87.57% |
-[Employee Bonus](https://leetcode.com/problems/employee-bonus/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/employee_bonus.sql) | 1659ms | 64.38%
+[Employee Bonus](https://leetcode.com/problems/employee-bonus/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/employee_bonus.sql) | 1659ms | 64.38% |
 [Employees Earning More Than Their Managers](https://leetcode.com/problems/employees-earning-more-than-their-managers/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/employees_earning_more_than_their_managers.sql) | 1429ms | 10.98% |
-[Not Boring Movies](https://leetcode.com/problems/not-boring-movies/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/not_boring_movies.sql) | 495ms | 47.80%
-[Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20%
-[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/second_highest_salary.sql) | 480ms | 64.38%
+[Not Boring Movies](https://leetcode.com/problems/not-boring-movies/description/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/not_boring_movies.sql) | 495ms | 47.80% |
+[Project Employees I](https://leetcode.com/problems/project-employees-i/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/project_employees_1.sql) | 1032ms | 62.20% |
+[Second Highest Salary](https://leetcode.com/problems/second-highest-salary/) | [SQL](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/sql/second_highest_salary.sql) | 480ms | 64.38% |
 
 ## Medium
 Problem | Code  | Runtime | Ranking |
