@@ -16,6 +16,7 @@ Problem | Code | Runtime | Ranking |
 [FizzBuzz](https://leetcode.com/problems/fizz-buzz/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FizzBuzz.java) | 1ms | 99.29% |
 [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/PalindromeNumber.java) | 8ms | 19.99% |
 [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/SortThePeople.java) | 4ms | 98.74% |
+[Reverse String](https://leetcode.com/problems/reverse-string/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ReverseString.java) | 1ms | 27.41% |
 [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/RichestCustomerWealth.java) | 0ms | 86.25% |
 [Sort the People](https://leetcode.com/problems/sort-the-people/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ReverseLinkedList.java) | 0ms | 94.45% |
 [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/SquaresOfASortedArray.java) | 2ms | 53.45% |
