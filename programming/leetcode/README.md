@@ -38,4 +38,4 @@ Problem | Code | Runtime | Ranking |
 Problem | Code  | Runtime | Ranking |
 ------- | ----- | ------- | ------- |
 [Count Primes](https://leetcode.com/problems/count-primes/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/medium/CountPrimes.java) | 106ms | 48.63% |
-[Ugly Number 2](https://leetcode.com/problems/count-primes/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/medium/UglyNumberTwo.java) | 2ms | 98.25% |
+[Ugly Number II](https://leetcode.com/problems/count-primes/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/medium/UglyNumberTwo.java) | 2ms | 98.25% |
