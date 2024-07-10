@@ -1,7 +1,7 @@
 # Java
 
 ## Overview
-For the Java curriculum, I completed these projects involving the Spring Framework:
+For the Java curriculum, I completed these projects:
 
 Project |
 ------- |
