@@ -1,7 +1,7 @@
 # LeetCode
 
+## Overview
 This folder contains my accepted submissions on LeetCode (Note: Performance refers to the percentage of submissions that my code beats in terms of runtime).
-
 LeetCode profile: https://leetcode.com/shumarb/
 
 ## Easy
@@ -16,7 +16,7 @@ LeetCode profile: https://leetcode.com/shumarb/
 | [Find Numbers with Even Number of Digits](https://leetcode.com/problems/find-numbers-with-even-number-of-digits/)                                       | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindNumbersWithEvenNumberOfDigits.java)            | 1ms     | 98.93%      |
 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)                 | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FindTheIndexOfTheFirstOccurrenceInAString.java)    | 0ms     | 100%        |
 | [FizzBuzz](https://leetcode.com/problems/fizz-buzz/description/)                                                                                        | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/FizzBuzz.java)                                     | 1ms     | 99.29%      |
-| [How Many Numbers Are Smaller Than The Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/HowManyNumbersAreSmallerThanTheCurrentNumber.java) | 10ms    | 21.72%      |
+| [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/) | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/HowManyNumbersAreSmallerThanTheCurrentNumber.java) | 10ms    | 21.72%      |
 | [Implement Queue Using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)                                                 | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ImplementQueueUsingStacks.java)                    | 0ms     | 100%        |
 | [Implement Stack Using Queues](https://leetcode.com/problems/implement-stack-using-queues/description/)                                                 | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/ImplementStackUsingQueues.java)                    | 0ms     | 100%        |
 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/description/)                                                                       | [Java](https://github.com/shumarb/training/blob/main/programming/leetcode/easy/java/PalindromeNumber.java)                             | 8ms     | 19.99%      |
