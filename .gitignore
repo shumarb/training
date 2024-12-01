@@ -1,0 +1,19 @@
+# Compiled class ###
+*.class
+
+# Package ###
+*.jar
+
+# IDE specific (keep eclipse related mostly) ###
+#.vscode
+#.project
+#.classpath
+#.settings
+#.metadata
+#target
+#.idea
+
+# Mac Specific ###
+.DS_Store
+._*
+__MACOSX
