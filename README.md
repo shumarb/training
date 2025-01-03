@@ -1,7 +1,7 @@
 # Training
 
 ## Overview
-This repository contains a summary of my industry-level training, and practices as part of revision.
+This repository contains a summary of my industry-level training and coding practices as part of revision.
 
 | Contents                                                                                  |
 |-------------------------------------------------------------------------------------------|
