@@ -1,4 +1,4 @@
-# Training
+# Competitive Programming
 
 ## Overview
 This repository contains a links to my submissions on Competitive Programming websites.
