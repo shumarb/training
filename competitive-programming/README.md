@@ -1,7 +1,7 @@
 # Competitive Programming
 
 ## Overview
-This repository contains a links to my submissions on Competitive Programming websites.
+This repository contains my competitive programming submissions.
 
 | Contents                                                                               |
 |----------------------------------------------------------------------------------------|
