@@ -6,5 +6,5 @@ This repository contains my coding practices and industry-level training for con
 | Contents                                                                                     |
 |----------------------------------------------------------------------------------------------|
 | [AlgoMonster](https://github.com/shumarb/algomonster)                                        |
-| [Competitive Programming](https://github.com/shumarb/competitive-programming)                |
+| [Programming](https://github.com/shumarb/programming)                                        |
 | [Massive Open Online Courses (MOOCs)](https://github.com/shumarb/improvement/tree/main/mooc) |
